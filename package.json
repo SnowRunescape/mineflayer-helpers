@@ -1,0 +1,24 @@
+{
+  "name": "mineflayer-utils",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SnowRunescape/mineflayer-utils"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "dependencies": {
+    "mineflayer": "^4.10.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
