@@ -14,6 +14,10 @@ export const getDirection = (bot: Bot) => {
     }
 }
 
+export const getHotBarItems = (bot: Bot) => {
+    return bot.inventory.items().filter(item => item.slot >= bot.inventory.hotbarStart && item.slot <= bot.inventory.inventoryEnd);
+}
+
 export const getHeldItemId = (bot: Bot) => {
     const item = bot.entity.heldItem;
 
