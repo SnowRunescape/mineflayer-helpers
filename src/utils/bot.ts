@@ -1,4 +1,5 @@
 import { Bot } from "mineflayer";
+import { Entity } from 'prismarine-entity'
 
 export const getDirection = (bot: Bot) => {
     const yaw = bot.entity.yaw;
@@ -36,4 +37,15 @@ export const getHeldItemDurability = (bot: Bot) => {
     }
 
     return item.maxDurability - item.durabilityUsed;
+}
+
+export const getEntityOrBlockAtCursor = (bot: Bot) => {
+    // @ts-ignore
+    const entity = bot.entityAtCursor() as Entity | null;
+
+    if (entity) {
+        return entity;
+    }
+
+    return bot.blockAtCursor();
 }
